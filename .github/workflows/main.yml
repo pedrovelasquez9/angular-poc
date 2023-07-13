@@ -4,9 +4,9 @@ name: Angular-CI
 on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,6 +34,6 @@ jobs:
       - name: Deploy to Pages
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          build_dir: dist/
-        env: 
+          build_dir: dist/angular-poc
+        env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
